@@ -1,0 +1,222 @@
+#container #header .headerTop {
+  background: #eaeaea;
+  height: 30px;
+}
+#container #header .headerTop .headerTopMain {
+  width: 1200px;
+  margin: 0 auto;
+  line-height: 30px;
+}
+#container #header .headerTop .headerTopMain::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#container #header .headerTop .headerTopMain .left {
+  float: left;
+}
+#container #header .headerTop .headerTopMain .left h5 {
+  float: left;
+  margin-right: 10px;
+}
+#container #header .headerTop .headerTopMain .left p {
+  float: left;
+}
+#container #header .headerTop .headerTopMain .left p a:first-child {
+  border-right: 1px solid #b3aeae;
+  margin-right: 0px;
+  padding-right: 3px;
+}
+#container #header .headerTop .headerTopMain .right {
+  float: right;
+}
+#container #header .headerTop .headerTopMain .right nav {
+  font-size: 0px;
+}
+#container #header .headerTop .headerTopMain .right nav a {
+  font-size: 12px;
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid #b3aeae;
+}
+#container #header .headerTop .headerTopMain .right nav a:last-child {
+  border: none;
+  margin-right: 0px;
+  padding-right: 0px;
+}
+#container #header .headerBottom {
+  margin-top: 15px;
+}
+#container #header .headerBottom .headerBottomMain {
+  width: 1200px;
+  margin: 0 auto;
+}
+#container #header .headerBottom .headerBottomMain::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#container #header .headerBottom .headerBottomMain .logo {
+  float: left;
+}
+#container #header .headerBottom .headerBottomMain .logo a img {
+  width: 175px;
+  height: 56px;
+  margin: 25px 45px;
+}
+#container #header .headerBottom .headerBottomMain .search {
+  float: right;
+  margin-top: 35px;
+}
+#container #header .headerBottom .headerBottomMain .search input:first-child {
+  box-sizing: border-box;
+  width: 490px;
+  height: 32px;
+  padding: 0 4px;
+  border: 3px solid #ea4a36;
+  float: left;
+}
+#container #header .headerBottom .headerBottomMain .search input:last-child {
+  width: 68px;
+  height: 32px;
+  color: #fff;
+  background: #ea4a36;
+  border: none;
+}
+#container #header .headerBottom .headerBottomMain .search input::-webkit-input-placeholder {
+  color: yellowgreen;
+}
+#container #categoryContainer {
+  margin-top: 15px;
+  border-bottom: 2px solid #e1251b;
+}
+#container #categoryContainer .categoryNavMain {
+  width: 1200px;
+  margin: 0 auto;
+}
+#container #categoryContainer .categoryNavMain::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#container #categoryContainer .categoryNavMain a {
+  margin: 0 15px;
+  font-size: 16px;
+  color: #333;
+  float: left;
+  text-align: center;
+  line-height: 50px;
+}
+#container #categoryContainer .categoryNavMain a:first-child {
+  width: 210px;
+  height: 50px;
+  background: #e1251b;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  float: left;
+  text-align: center;
+  line-height: 50px;
+}
+#container #productContainer .productMain {
+  width: 1200px;
+  margin: 15px auto 0 auto;
+}
+#container #productContainer .productMain .navPath {
+  padding: 9px 15px 9px 0;
+  font-size: 0px;
+}
+#container #productContainer .productMain .navPath a {
+  font-size: 12px;
+}
+#container #productContainer .productMain .navPath i {
+  padding: 0 5px;
+  font-size: 12px;
+}
+#container #productContainer .productMain .details {
+  margin: 5px 0 15px;
+}
+#container #productContainer .productMain .details .left {
+  width: 400px;
+  float: left;
+}
+#container #productContainer .productMain .details .left .leftTop {
+  width: 400px;
+  position: relative;
+}
+#container #productContainer .productMain .details .left .leftTop .smallPic {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #dfdfdf;
+  position: relative;
+}
+#container #productContainer .productMain .details .left .leftTop .smallPic img {
+  width: 400px;
+  height: 400px;
+}
+#container #productContainer .productMain .details .left .leftTop .smallPic .mask {
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid #ddd;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+#container #productContainer .productMain .details .left .leftTop .bigPic {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #ddd;
+  left: 420px;
+  top: 0px;
+  position: absolute;
+  overflow: hidden;
+}
+#container #productContainer .productMain .details .left .leftTop .bigPic img {
+  width: 800px;
+  height: 800px;
+  position: absolute;
+}
+#container #productContainer .productMain .details .left .leftBottom {
+  width: 400px;
+  margin-top: 5px;
+  display: flex;
+}
+#container #productContainer .productMain .details .left .leftBottom a {
+  width: 10px;
+  height: 50px;
+  border: 1px solid #ccc;
+  background: #ebebeb;
+  text-align: center;
+  line-height: 54px;
+}
+#container #productContainer .productMain .details .left .leftBottom a:first-child {
+  margin-right: 8px;
+}
+#container #productContainer .productMain .details .left .leftBottom .picList {
+  width: 372px;
+  height: 56px;
+  overflow: hidden;
+  position: relative;
+}
+#container #productContainer .productMain .details .left .leftBottom .picList ul {
+  display: flex;
+  position: absolute;
+  transition: 0.5s;
+  left: 0px;
+}
+#container #productContainer .productMain .details .left .leftBottom .picList ul li {
+  justify-content: space-around;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ccc;
+  padding: 2px;
+  margin-right: 20px;
+}
+#container #productContainer .productMain .details .left .leftBottom .picList ul li img {
+  width: 50px;
+  height: 50px;
+}
+#container #productContainer .productMain .details .right {
+  float: right;
+}
