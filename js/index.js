@@ -270,32 +270,32 @@ window.onload = function(){
     }
 
     // right bottom detail rendering. 
-    rightBottomDate()
-    function rightBottomDate(){
-       //1. get rightBottom elements
-       var rightBottom = document.querySelector(".rightBottom");
+    // rightBottomDate()
+    // function rightBottomDate(){
+    //    //1. get rightBottom elements
+    //    var rightBottom = document.querySelector(".rightBottom");
        
-       //2. get goodDetail from goodData source
-       var crumbData = goodData.goodsDetail.crumbData;
+    //    //2. get goodDetail from goodData source
+    //    var crumbData = goodData.goodsDetail.crumbData;
 
-       //3 iterate crumbData
-       crumbData.forEach(e => {
-            //4. Create dl element
-            var dlNode = document.createElement("dl");
+    //    //3 iterate crumbData
+    //    crumbData.forEach(e => {
+    //         //4. Create dl element
+    //         var dlNode = document.createElement("dl");
             
-            //5. Create dt element
-            var dtNode = document.createElement("dt");
+    //         //5. Create dt element
+    //         var dtNode = document.createElement("dt");
             
-            //6. Create dd element
-            e.data.forEach( e => {
-                var ddNode = document.createElement("dd");
-                ddNode.innerText = e.type;
-                console.log(ddNode);
-            })
+    //         //6. Create dd element
+    //         e.data.forEach( e => {
+    //             var ddNode = document.createElement("dd");
+    //             ddNode.innerText = e.type;
+    //             console.log(ddNode);
+    //         })
              
-            //7. append dtnode & ddnode to dl node
-            dlNode.appendChild(dtNode);
-            dlNode.appendChild(ddNode);
-       });
-    }
+    //         //7. append dtnode & ddnode to dl node
+    //         dlNode.appendChild(dtNode);
+    //         dlNode.appendChild(ddNode);
+    //    });
+    // }
 }
