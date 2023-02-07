@@ -216,4 +216,86 @@ window.onload = function(){
             ul.style.left = -start + "px";
         }
     }
+
+    //right top detail rendering
+    rightTopData();
+    function rightTopData(){
+        //1. get rightTop elements
+        var rightTop = document.querySelector(".rightTop");
+        
+        //2. get goodDetail from goodData source
+        var goodsDetail = goodData.goodsDetail;
+        
+        //3. create a string variable store all layout within rightTop element
+        var s= `<h3>${goodsDetail.title}</h3>
+                <p class="renewed"><a href="javascript:;">${goodsDetail.renewed}</a></p>
+                <div class="priceContainer">
+                    <div class="price">
+                        <span>Price: </span>
+                        <div class="priceValue">
+                            <span>$</span>
+                            <p>${goodsDetail.price}</p>
+                            <i><a href="javascript:;">Buy it again</a></i>
+                        </div>
+                        <p>
+                            <span>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            </span>
+                            <span>${goodsDetail.evaluateNum}</span>
+                        </p>
+                    </div>
+                    <div class="promote">
+                        <span>Promote: </span>
+                        <p>
+                        <span>${goodsDetail.promote.type}</span>
+                        <span>${goodsDetail.promote.content}</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="tradeIn">
+                    <span>Trade-in and save</span>
+                    <p>${goodsDetail.tradeIn}</p>
+                </div>
+                <div class="address">
+                    <span><i class="fas fa-map-marker-alt"></i>&nbsp Delivery to Kun</span>
+                    <p>${goodsDetail.address}</p>
+                </div>`
+
+        //4. Append string variable
+        rightTop.innerHTML = s;
+    }
+
+    // right bottom detail rendering. 
+    rightBottomDate()
+    function rightBottomDate(){
+       //1. get rightBottom elements
+       var rightBottom = document.querySelector(".rightBottom");
+       
+       //2. get goodDetail from goodData source
+       var crumbData = goodData.goodsDetail.crumbData;
+
+       //3 iterate crumbData
+       crumbData.forEach(e => {
+            //4. Create dl element
+            var dlNode = document.createElement("dl");
+            
+            //5. Create dt element
+            var dtNode = document.createElement("dt");
+            
+            //6. Create dd element
+            e.data.forEach( e => {
+                var ddNode = document.createElement("dd");
+                ddNode.innerText = e.type;
+                console.log(ddNode);
+            })
+             
+            //7. append dtnode & ddnode to dl node
+            dlNode.appendChild(dtNode);
+            dlNode.appendChild(ddNode);
+       });
+    }
 }
