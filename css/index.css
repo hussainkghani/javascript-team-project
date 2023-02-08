@@ -44,6 +44,25 @@
   margin-right: 0px;
   padding-right: 0px;
 }
+#container #header .headerTop .headerTopMain .right nav a span #lblCartCount {
+  font-size: 12px;
+  background: #ff0000;
+  color: #fff;
+  padding: 0 5px;
+  vertical-align: top;
+  margin-left: -10px;
+}
+#container #header .headerTop .headerTopMain .right nav a span .badge {
+  padding-left: 9px;
+  padding-right: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+}
+#container #header .headerTop .headerTopMain .right nav a span .label-warning[href],
+#container #header .headerTop .headerTopMain .right nav a span .badge-warning[href] {
+  background-color: #c67605;
+}
 #container #header .headerBottom {
   margin-top: 15px;
 }
@@ -136,6 +155,11 @@
 #container #productContainer .productMain .details {
   margin: 5px 0 15px;
 }
+#container #productContainer .productMain .details::after {
+  clear: both;
+  display: block;
+  content: '';
+}
 #container #productContainer .productMain .details .left {
   width: 400px;
   float: left;
@@ -218,5 +242,189 @@
   height: 50px;
 }
 #container #productContainer .productMain .details .right {
+  width: 700px;
   float: right;
+}
+#container #productContainer .productMain .details .right .rightTop h3 {
+  font-size: 14px;
+  line-height: 21px;
+}
+#container #productContainer .productMain .details .right .rightTop > p {
+  margin-top: 15px;
+}
+#container #productContainer .productMain .details .right .rightTop > p a {
+  color: green;
+}
+#container #productContainer .productMain .details .right .rightTop .priceContainer {
+  margin-top: 10px;
+  line-height: 28px;
+  background: #fee9ec;
+  padding: 7px;
+}
+#container #productContainer .productMain .details .right .rightTop .priceContainer .price::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#container #productContainer .productMain .details .right .rightTop .priceContainer .price > span {
+  margin-right: 15px;
+  float: left;
+}
+#container #productContainer .productMain .details .right .rightTop .priceContainer .price .priceValue {
+  float: left;
+}
+#container #productContainer .productMain .details .right .rightTop .priceContainer .price .priceValue > span {
+  font-size: 16px;
+  float: left;
+}
+#container #productContainer .productMain .details .right .rightTop .priceContainer .price .priceValue p {
+  font-size: 24px;
+  float: left;
+  margin-right: 10px;
+}
+#container #productContainer .productMain .details .right .rightTop .priceContainer .price .priceValue i a {
+  font-size: 12px;
+  color: blue;
+  float: left;
+}
+#container #productContainer .productMain .details .right .rightTop .priceContainer .price p {
+  float: right;
+}
+#container #productContainer .productMain .details .right .rightTop .priceContainer .promote > span {
+  float: left;
+  margin-right: 15px;
+}
+#container #productContainer .productMain .details .right .rightTop .priceContainer .promote::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#container #productContainer .productMain .details .right .rightTop .priceContainer .promote p {
+  width: 520px;
+  line-height: 28px;
+  float: left;
+}
+#container #productContainer .productMain .details .right .rightTop .priceContainer .promote p > span {
+  color: #999;
+}
+#container #productContainer .productMain .details .right .rightTop .priceContainer .promote p > span:first-child {
+  background: #c81623;
+  padding: 3px;
+  color: #fff;
+}
+#container #productContainer .productMain .details .right .rightTop .tradeIn {
+  padding-bottom: 5px;
+  margin-top: 10px;
+  line-height: 28px;
+}
+#container #productContainer .productMain .details .right .rightTop .tradeIn::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#container #productContainer .productMain .details .right .rightTop .tradeIn > span {
+  margin-right: 15px;
+  float: left;
+}
+#container #productContainer .productMain .details .right .rightTop .tradeIn > p {
+  float: left;
+  color: #999;
+}
+#container #productContainer .productMain .details .right .rightTop .address {
+  padding-bottom: 5px;
+  margin-top: 10px;
+  line-height: 28px;
+  display: flex;
+}
+#container #productContainer .productMain .details .right .rightTop .address::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#container #productContainer .productMain .details .right .rightTop .address > span {
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+#container #productContainer .productMain .details .right .rightTop .address > p {
+  color: #999;
+}
+#container #productContainer .productMain .details .right .rightBottom {
+  margin-top: 10px;
+  line-height: 28px;
+}
+#container #productContainer .productMain .details .right .rightBottom .selection {
+  display: flex;
+}
+#container #productContainer .productMain .details .right .rightBottom .selection .mark {
+  height: 30px;
+  background: snow;
+  border: 1px solid #ddd;
+  padding: 0 20px;
+  margin-right: 20px;
+  text-align: center;
+  line-height: 30px;
+}
+#container #productContainer .productMain .details .right .rightBottom .selection .mark a {
+  color: red;
+  margin-left: 20px;
+}
+#container #productContainer .productMain .details .right .rightBottom .options dl {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+}
+#container #productContainer .productMain .details .right .rightBottom .options dl dt {
+  margin-right: 15px;
+}
+#container #productContainer .productMain .details .right .rightBottom .options dl dd {
+  margin-right: 10px;
+  color: #666;
+  line-height: 24px;
+  padding: 2px 14px;
+  border-top: 1px solid #eee;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+}
+#container #productContainer .productMain .details .right .rightBottom .addCart {
+  display: flex;
+}
+#container #productContainer .productMain .details .right .rightBottom .addCart .count {
+  width: 55px;
+  margin-right: 15px;
+  position: relative;
+}
+#container #productContainer .productMain .details .right .rightBottom .addCart .count input {
+  width: 38px;
+  height: 37px;
+  border: 1px solid #ddd;
+  color: #555;
+  text-align: center;
+}
+#container #productContainer .productMain .details .right .rightBottom .addCart .count a {
+  width: 15px;
+  height: 18px;
+  color: #666;
+  background: #f1f1f1;
+  position: absolute;
+  right: 1px;
+  text-align: center;
+  line-height: 18px;
+  border: 1px solid #ddd;
+}
+#container #productContainer .productMain .details .right .rightBottom .addCart .count a:first-child {
+  top: 0px;
+}
+#container #productContainer .productMain .details .right .rightBottom .addCart .count a:last-child {
+  top: 20px;
+  border-top: 0px;
+}
+#container #productContainer .productMain .details .right .rightBottom .addCart button {
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 36px;
+  font-size: 16px;
+  background: #e1251b;
+  color: #fff;
+  border: none;
 }

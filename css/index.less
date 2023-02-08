@@ -46,6 +46,29 @@
                                 margin-right: 0px;
                                 padding-right: 0px;
                             }
+                            i{};
+                            span{
+                                #lblCartCount {
+                                    font-size: 12px;
+                                    background: #ff0000;
+                                    color: #fff;
+                                    padding: 0 5px;
+                                    vertical-align: top;
+                                    margin-left: -10px;
+                                }
+                                .badge{
+                                    padding-left: 9px;
+                                    padding-right: 9px;
+                                    -webkit-border-radius: 9px;
+                                    -moz-border-radius: 9px;
+                                    border-radius: 9px;
+                                };
+                                .label-warning[href],
+                                .badge-warning[href] {
+                                    background-color: #c67605;
+                                }
+                                
+                            }
                         }
                     }
                 }
@@ -152,9 +175,10 @@
                 };
             }
 
-            //picture section
+            //picture and specific section
             .details{
                 margin: 5px 0 15px;
+                .clearfix();
                 .left{
                     width: 400px;
                     float: left;
@@ -238,12 +262,197 @@
                     }
                 }
                 .right{
-                    float:right;
+                    width: 700px;
+                    float: right;
                     .rightTop{
-                        
+                       h3{
+                            font-size: 14px;
+                            line-height: 21px;
+                       }; 
+                      > p{
+                            a{color:green;};
+                            margin-top: 15px;
+                       };
+                       .priceContainer{
+                            margin-top: 10px;
+                            line-height: 28px;
+                            background: #fee9ec;
+                            padding: 7px;
+                            .price{
+                                .clearfix();
+                                > span{
+                                    margin-right: 15px;
+                                    float: left;
+                                };
+                                .priceValue{
+                                    float: left;
+                                    > span{
+                                        font-size: 16px;
+                                        float: left;
+                                    };
+                                    p{
+                                        font-size: 24px;
+                                        float: left;
+                                        margin-right: 10px;
+                                    };
+                                    i{
+                                        a{
+                                            font-size: 12px;
+                                            color: blue;
+                                            float: left;
+                                        }
+                                    }
+                                };
+                                p{
+                                    float: right;
+                                    > span{
+
+                                    };
+
+                                }
+                            };
+                            .promote{
+                                
+                                > span{
+                                    float:left;
+                                    margin-right: 15px
+                                };
+                                .clearfix();
+                                p{
+                                    width:520px;
+                                    line-height: 28px;
+                                    float: left;
+                                    > span {
+                                        color: #999;
+                                        &:first-child{
+                                            background: #c81623;
+                                            padding: 3px;
+                                            color:#fff;
+                                        }
+                                    }
+                                };
+                            }
+                       };
+                       .tradeIn{
+                          
+                            padding-bottom: 5px;
+                            margin-top: 10px;
+                            line-height: 28px;
+                            .clearfix();
+                           > span{
+                                margin-right: 15px;
+                                float: left;
+                           };
+                            > p{
+                                float: left;
+                                color: #999;
+                            };
+                       };
+                       .address{
+                            padding-bottom: 5px;
+                            margin-top: 10px;
+                            line-height: 28px;
+                            .clearfix();
+                            display: flex;
+                            > span{
+                                margin-right: 15px; 
+                                margin-bottom: 5px;
+                            };
+                             > p{
+                                color: #999;
+                            };
+                       }
+                       
+
+                    }
+                    .rightBottom{
+                        margin-top: 10px;
+                        line-height: 28px;
+                        .selection{
+                            display: flex;
+                            .mark{
+                                height: 30px;
+                                background: snow;
+                                border: 1px solid #ddd;
+                                padding: 0 20px;
+                                margin-right: 20px;
+                                text-align: center;
+                                line-height: 30px;
+                                a{
+                                    color: red;
+                                    margin-left: 20px;
+                                }
+                            }
+                        };
+                        .options{
+                            dl{
+                                margin-top:15px;
+                                margin-bottom: 15px;
+                                display: flex;
+                                dt{
+                                    margin-right: 15px; 
+                                     
+                                };
+                                dd{
+                                    margin-right: 10px;
+                                    color: #666;
+                                    line-height: 24px;
+                                    padding: 2px 14px;
+                                    border-top: 1px solid #eee;
+                                    border-left: 1px solid #eee;
+                                    border-right: 1px solid #bbb;
+                                    border-bottom: 1px solid #bbb;
+                                    
+                                };
+                            }
+                        }
+                        .addCart{
+                            display: flex;
+                            .count{
+                                width: 55px;
+                                margin-right: 15px;
+                                position: relative;
+                                
+                                input{
+                                    width: 38px;
+                                    height: 37px;
+                                    border: 1px solid #ddd;
+                                    color: #555;
+                                    text-align: center;
+                                };
+                                a{
+                                    width:15px;
+                                    height: 18px;
+                                    color:#666;  
+                                    background: #f1f1f1;
+                                    position: absolute;
+                                    right: 1px;
+                                    text-align: center;
+                                    line-height: 18px;
+                                    border: 1px solid #ddd;
+                                    &:first-child{
+                                        top: 0px; 
+                                    };
+                                    &:last-child{
+                                        top: 20px;
+                                        border-top: 0px;
+                                    };
+                                }
+                            };
+                            button{
+                                padding-left: 25px;
+                                padding-right: 25px;
+                                height: 36px;
+                                font-size: 16px;
+                                background: #e1251b;
+                                color: #fff;
+                                border: none;
+                            }
+                        }
                     }
                 }
             }
+
         }
     }
     

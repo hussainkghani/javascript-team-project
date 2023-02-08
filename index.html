@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/index.css">
     <!-- icon font -->
     <link rel="stylesheet" href="./fa/css/all.css">
+    
 </head>
 <body>
     <!-- the out wrap -->
@@ -23,15 +24,19 @@
                     <div class="left">
                         <h5>Welcome to Hussain & Kun LLC</h5>
                         <p>
-                            <a href="javascript:;">Log In</a>
-                            <a href="javascript:;">Sign up</a>
+                            <a href="./log-in.html">Log In</a>
+                            <a href="./sign-up.html">Sign up</a>
                         </p>
                     </div>
                     <!-- right top header -->
                     <div class="right">
                         <nav>
                             <a href="javascript:;">Order</a>
-                            <a href="javascript:;">Cart</a>
+                            <a href="javascript:;">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <span class='badge badge-warning' id='lblCartCount'></span>
+                                Cart
+                            </a>
                             <a href="javascript:;">Account</a>
                             <a href="javascript:;">Membership</a>
                             <a href="javascript:;">Gift Card</a>
@@ -78,7 +83,7 @@
                 <!-- nav section -->
                 <div class="navPath"></div>
                 
-                <!-- picture and detail section -->
+                <!-- picture and specific section -->
                 <div class="details">
                     <!-- left picture section -->
                     <div class="left">
@@ -104,42 +109,27 @@
                     <!-- right good details -->
                     <div class="right">
                         <!-- right good detail section  -->
-                        <div class="righTop">
-                            <h3>Apple iPhone 14 Pro Max, 256GB, Space Black - Unlocked</h3>
-                            <a href="javascript:;" class="renewed">Visit the Apple Renewed Store</a>
-                            <div class="priceContainer">
-                                <div class="price">
-                                    <span>Price: </span>
-                                    <div class="priceValue">
-                                        <span>$</span>
-                                        <p>1399.59</p>
-                                        <i>Buy it now</i>
-                                    </div>
-                                    <p>
-                                        <span>Total review</span>
-                                        <span>6700</span>
-                                    </p>
+                        <div class="rightTop"></div>
+                        <div class="rightBottom">
+                            <!-- selection -->
+                            <div class="selection">
+                            </div>
+                            <!-- options -->
+                            <div class="options">    
+                            </div>
+                            <!-- shopping cart -->
+                            <dov class="addCart">
+                                <div class="count">
+                                    <input type="text" id="count" value="0">
+                                    <a href="javascript:;">+</a>
+                                    <a href="javascript:;">-</a>
                                 </div>
-                                <div class="promote">
-                                    <span>Promote: </span>
-                                    <p>
-                                       <span>Coupon/Discount</span>
-                                       <span>Get $50 off instantly: Pay $1,309.00 upon approval for the Amazon Rewards Visa Card. No annual fee.</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="tradeIn">
-                                <span>Trade-in and save</span>
-                                <p>Save up to $401.00 on your new device with Amazon.com Gift Card credit when you trade in your old device</p>
-                            </div>
-                            <div class="delivery">
-                                <span><i class="fas fa-map-marker-alt"></i>Delivery to Kun</span>
-                                <p>Mercer Island, WA98040</p>
-                            </div>
+                                <button id="button" type="submit">Add to cart</button>
+                            </dov>
                         </div>
-                        <div class="righBottom"></div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

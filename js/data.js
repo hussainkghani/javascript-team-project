@@ -32,17 +32,17 @@ var goodData = {
     goodsDetail: {
         title: "Apple iPhone 14 Pro Max, 256GB, Space Black - Unlocked",
         renewed: "Visit the Apple Renewed Store",
-        price: 5299,
+        price: 1399,
         promote: {
             type: "Coupon/Discount",
             content: "Get $50 off instantly: Pay $1,309.00 upon approval for the Kun Rewards Visa Card. No annual fee"
         },
         tradeIn: "Save up to $401.00 on your new device with Hussain Gift Card credit when you trade in your old device",
-        delivery: "Mercer Island, WA98040",
-        evaluateNum: 670000,
+        address: "Mercer Island, WA98040",
+        evaluateNum: 5789,
         crumbData: [
             {
-                "title": " ",
+                "title": "Color",
                 "data": [
                     {
                         type: "Gold",
@@ -53,8 +53,16 @@ var goodData = {
                         changePrice: 40
                     },
                     {
-                        type: "Black",
+                        type: "Space Gray",
                         changePrice: 90
+                    },
+                    {
+                        type: "Deep Purple",
+                        changePrice: 100
+                    },
+                    {
+                        type: "White",
+                        changePrice: 85,
                     },
                 ]
             },
@@ -62,33 +70,33 @@ var goodData = {
                 "title": "Capacity",
                 "data": [
                     {
-                        type: "16G",
+                        type: "128G",
                         changePrice: 0
                     },
                     {
-                        type: "64G",
-                        changePrice: 300
-                    },
-                    {
-                        type: "128G",
-                        changePrice: 900
-                    },
-                    {
                         type: "256G",
-                        changePrice: 1300
+                        changePrice: 200
+                    },
+                    {
+                        type: "512G",
+                        changePrice: 400
+                    },
+                    {
+                        type: "1T",
+                        changePrice: 600
                     },
                 ]
             },
             {
-                "title": "Version",
+                "title": "Type",
                 "data": [
                     {
-                        type: "Lock",
+                        type: "Unlock",
                         changePrice: 0
                     },
                     {
-                        type: "Unlock",
-                        changePrice: -1000
+                        type: "Contract",
+                        changePrice: -1300
                     }
                 ]
             },
@@ -104,11 +112,11 @@ var goodData = {
                         changePrice: -240
                     },
                     {
-                        type: "T-Mobile",
+                        type: "Sprint",
                         changePrice: -390
                     },
                     {
-                        type: "Sprint",
+                        type: "T-Mobile",
                         changePrice: -390
                     },
                 ]
