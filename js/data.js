@@ -32,7 +32,7 @@ var goodData = {
     goodsDetail: {
         title: "Apple iPhone 14 Pro Max, 256GB, Space Black - Unlocked",
         renewed: "Visit the Apple Renewed Store",
-        price: 5299,
+        price: 1399,
         promote: {
             type: "Coupon/Discount",
             content: "Get $50 off instantly: Pay $1,309.00 upon approval for the Kun Rewards Visa Card. No annual fee"
@@ -60,6 +60,10 @@ var goodData = {
                         type: "Deep Purple",
                         changePrice: 100
                     },
+                    {
+                        type: "White",
+                        changePrice: 85,
+                    },
                 ]
             },
             {
@@ -71,15 +75,15 @@ var goodData = {
                     },
                     {
                         type: "256G",
-                        changePrice: 300
+                        changePrice: 200
                     },
                     {
                         type: "512G",
-                        changePrice: 900
+                        changePrice: 400
                     },
                     {
                         type: "1T",
-                        changePrice: 1300
+                        changePrice: 600
                     },
                 ]
             },
@@ -92,7 +96,7 @@ var goodData = {
                     },
                     {
                         type: "Contract",
-                        changePrice: -1000
+                        changePrice: -1300
                     }
                 ]
             },

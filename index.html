@@ -32,7 +32,11 @@
                     <div class="right">
                         <nav>
                             <a href="javascript:;">Order</a>
-                            <a href="javascript:;">Cart</a>
+                            <a href="javascript:;">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <span class='badge badge-warning' id='lblCartCount'></span>
+                                Cart
+                            </a>
                             <a href="javascript:;">Account</a>
                             <a href="javascript:;">Membership</a>
                             <a href="javascript:;">Gift Card</a>
@@ -79,7 +83,7 @@
                 <!-- nav section -->
                 <div class="navPath"></div>
                 
-                <!-- picture and detail section -->
+                <!-- picture and specific section -->
                 <div class="details">
                     <!-- left picture section -->
                     <div class="left">
@@ -108,42 +112,24 @@
                         <div class="rightTop"></div>
                         <div class="rightBottom">
                             <!-- selection -->
-
+                            <div class="selection">
+                            </div>
                             <!-- options -->
-                            <div class="options">
-                                <dl>
-                                    <dt>Color</dt>
-                                    <dd>Gold</dd>
-                                    <dd>Silver</dd>
-                                    <dd>Deep Purple</dd>
-                                    <dd>Space Gray</dd>
-                                </dl>
-                                <dl>
-                                    <dt>Capacity</dt>
-                                    <dd>128GN</dd>
-                                    <dd>256GB</dd>
-                                    <dd>512GB</dd>
-                                    <dd>1TB</dd>
-                                </dl>
-                                <dl>
-                                    <dt>Type</dt>
-                                    <dd>Unlock</dd>
-                                    <dd>Contract</dd>
-                                </dl>
-                                <dl>
-                                    <dt>Carrier</dt>
-                                    <dd>AT&T</dd>
-                                    <dd>Verizon</dd>
-                                    <dd>Sprint</dd>
-                                    <dd>T-Mobile</dd>
-                                </dl>
-                                
+                            <div class="options">    
                             </div>
                             <!-- shopping cart -->
-
+                            <dov class="addCart">
+                                <div class="count">
+                                    <input type="text" id="count" value="0">
+                                    <a href="javascript:;">+</a>
+                                    <a href="javascript:;">-</a>
+                                </div>
+                                <button id="button" type="submit">Add to cart</button>
+                            </dov>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

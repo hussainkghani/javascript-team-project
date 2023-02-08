@@ -270,32 +270,170 @@ window.onload = function(){
     }
 
     // right bottom detail rendering. 
-    // rightBottomDate()
-    // function rightBottomDate(){
-    //    //1. get rightBottom elements
-    //    var rightBottom = document.querySelector(".rightBottom");
+    rightBottomDate()
+    function rightBottomDate(){
+       //1. get option elements
+       var options = document.querySelector(".options");
        
-    //    //2. get goodDetail from goodData source
-    //    var crumbData = goodData.goodsDetail.crumbData;
+       //2. get goodDetail from goodData source
+       var crumbData = goodData.goodsDetail.crumbData;
 
-    //    //3 iterate crumbData
-    //    crumbData.forEach(e => {
-    //         //4. Create dl element
-    //         var dlNode = document.createElement("dl");
+       //3 iterate crumbData
+       crumbData.forEach(e => {
+            //4. Create dl element
+            var dlNode = document.createElement("dl");
             
-    //         //5. Create dt element
-    //         var dtNode = document.createElement("dt");
+            //5. Create dt element, append to dl element
+            var dtNode = document.createElement("dt");
+            dtNode.innerText = e.title;
+            dlNode.appendChild(dtNode);
             
-    //         //6. Create dd element
-    //         e.data.forEach( e => {
-    //             var ddNode = document.createElement("dd");
-    //             ddNode.innerText = e.type;
-    //             console.log(ddNode);
-    //         })
-             
-    //         //7. append dtnode & ddnode to dl node
-    //         dlNode.appendChild(dtNode);
-    //         dlNode.appendChild(ddNode);
-    //    });
-    // }
+            //6. Create dd element
+            e.data.forEach( e => {
+                var ddNode = document.createElement("dd");
+                ddNode.innerText = e.type;
+                ddNode.setAttribute('price', e.changePrice);
+                dlNode.appendChild(ddNode)
+            })
+            
+          //7. append dl to option element
+            options.appendChild(dlNode);
+       });  
+    }
+
+    //font color change after click
+    optionColorChange()
+    function optionColorChange(){
+     //1. get all dl elements
+      var dlNodes = document.querySelectorAll("dl");
+      //create empty array to stroe selected result
+      var arr = new Array(dlNodes.length).fill(0);
+        
+      //create mark element's parent element
+      var select = document.querySelector(".selection");
+
+     //2. literate all dd element, bind onclick event.
+     dlNodes.forEach( (e,index) => {
+        var ddNodes = e.querySelectorAll("dd");
+        //3. clcik dd element and change color to red.
+
+        for(let i=0; i<ddNodes.length; i++){
+            ddNodes[i].onclick = function(){
+                //clear the selection result prvent from repeat value
+                select.innerHTML = '';
+
+                for(let j=0; j<ddNodes.length; j++){
+                    ddNodes[j].style.color = "#666";
+                }
+                
+                ddNodes[i].style.color = "red";
+                 //store the selected result to array
+                arr[index] = ddNodes[i];
+
+                //
+                priceCal(arr);
+
+                 //iterate arr, put non-zero element to mark element
+                arr.forEach((e, index) => {
+                    if(e){
+                    var markDiv = document.createElement('div');
+                    markDiv.className = 'mark';
+                    markDiv.innerText = e.innerText;
+                    var aNode = document.createElement('a');
+                    aNode.innerText = 'X';
+                    aNode.setAttribute('index', index)
+                    markDiv.appendChild(aNode);
+                    select.appendChild(markDiv);
+            }
+                })
+
+                //get all a element with mark element
+                var aNodes = document.querySelectorAll("a");
+                for( var n=0; n<aNodes.length; n++){
+                    aNodes[n].onclick = function(){
+                        //get index property from aNode.
+                        var idx1 = this.getAttribute('index');
+                         
+                        //set the arr[idx1] = 0;
+                        arr[idx1] = 0;
+
+                        //find the corresponding dd element in dl
+                        var ddList = dlNodes[idx1].querySelectorAll('dd');
+
+                        //iterate all dd element to reset the color of dd text
+                        for(var m=0; m<ddList.length; m++){
+                            ddList[m].style.color = "#666";
+                        }
+                        ddList[0].style.color = 'red';
+
+                        //delete the corresponding mark element
+                        select.removeChild(this.parentNode);
+
+                        //recalcuate price once aNode was removed
+                        priceCal(arr);
+                    }
+                }
+            }
+        }
+     }) 
+    }
+
+    // //price calculate
+    function priceCal(arr){
+        //1. get price lement 
+        var oldPrice = document.querySelector(".priceValue p");
+       
+        //get default price 
+        var price = goodData.goodsDetail.price;
+        //2. iterate arr 
+        for(var i=0; i<arr.length; i++){
+            if(arr[i]){
+                var changePrice = Number(arr[i].getAttribute('price'));
+                price += changePrice;
+            }
+        }
+        
+        //change the price with p
+        oldPrice.innerText = price;
+    }
+    
+    //add To Cart
+    addToCart()
+    function addToCart(){
+        //1. get the count value 
+        var orderCount = document.querySelector("#lblCartCount");
+        
+        //2.get plus and minus ico
+        var plus = document.querySelector(".count").querySelectorAll('a')[0];
+        var minus = document.querySelector(".count").querySelectorAll('a')[1];
+        
+
+        //3.get button element
+        var button = document.querySelector("#button");
+        
+        //4. get the input element 
+        var input = document.querySelector(".count input");
+        var num = Number(input.value);
+         
+        // plus and minus onclick event
+        plus.onclick = () => {
+            num++;
+            input.value = num;
+        }
+
+        minus.onclick = () => {
+            if(num<=0){
+                num = 0;
+                input.value = num;
+            }else{
+                num--;
+                input.value = num;
+            }
+        }
+
+        button.onclick = function(){
+            orderCount.innerText = num;
+            console.log(count);
+        }        
+    }
 }
