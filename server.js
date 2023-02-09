@@ -75,4 +75,4 @@ app.get("/", (req, res) => {
     });
     return res.redirect('index.html')
 }).listen(3000);
-console.log("Listening on PORT 3000");
+console.log("Server start, begin to listening on PORT 3000");
