@@ -24,16 +24,7 @@ const db = mongoose.connection;
 db.on("error", ()=> console.log("Connection to database Failed"));
 db.once("open", () => console.log("Connection to Database successful"));
 
-//Create the customers collection that will hold our customerData object
-// db.createCollection("customers", function(err, res){
-//     if(err) throw err;
-//     console.log("Collection created");
-// })
-
-//Tells system that you want JSON to be used which we can send to mongoDB
 app.use(bodyParser.json());
-
-//You can find the static files in the public director
 app.use(express.static('public'));
 //parses any url
 app.use(bodyParser.urlencoded({
@@ -44,7 +35,7 @@ app.post("/sign_up", (req,res)=>{
     const firstName = req.body.input_first_name;
     const lastName = req.body.input_last_name;
     const email = req.body.input_email;
-    const password = req.body.input_password;
+    const accountType = req.body.input_account_type;
     const address = req.body.input_address;
     const city = req.body.input_city;
     const country = req.body.input_country;
@@ -57,7 +48,7 @@ app.post("/sign_up", (req,res)=>{
         "firstName": firstName,
         "lastName": lastName,
         "email": email,
-        "password": password,
+        "accountType": accountType,
         "address": address,
         "city": city,
         "country": country,
@@ -67,7 +58,7 @@ app.post("/sign_up", (req,res)=>{
     }
 
     //insert the customerData document into customers schema
-    db.collection("customers").insertOne(customerData,(err, collection)=>{
+    db.collection('customers').insertOne(customerData,(err, collection)=>{
         if(err){
             throw err;
         }
