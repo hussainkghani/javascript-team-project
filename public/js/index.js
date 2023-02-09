@@ -348,7 +348,7 @@ window.onload = function(){
                 })
 
                 //get all a element with mark element
-                var aNodes = document.querySelectorAll("a");
+                var aNodes = document.querySelector(".selection").querySelectorAll("a");
                 for( var n=0; n<aNodes.length; n++){
                     aNodes[n].onclick = function(){
                         //get index property from aNode.

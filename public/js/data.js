@@ -96,7 +96,7 @@ var goodData = {
                     },
                     {
                         type: "Contract",
-                        changePrice: -1300
+                        changePrice: -900
                     }
                 ]
             },
