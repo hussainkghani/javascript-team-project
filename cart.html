@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Order</title>
+    <!-- clear the pattern -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- my css -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- icon font -->
+    <link rel="stylesheet" href="./fa/css/all.css">
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Navbar brand -->
+                <a class="navbar-brand mt-2 mt-lg-0" href="index.html">
+                    <img src="images/logo.png" height="100" alt="logo" loading="lazy" />
+                </a>
+                <!-- Left links -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="log-in.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sign-up.html">Sign-up</a>
+                    </li>
+                </ul>
+                <!-- Left links -->
+            </div>
+            <!-- Collapsible wrapper -->
+
+            <!-- Right elements -->
+            <div class="d-flex align-items-center">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="order.html">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="account-details.html">Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Membership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Gift Card</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Your Inbox</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Customer Service</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Right elements -->
+        </div>
+        <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+
+    <section class="h-100 h-custom" style="background-color: #eee;">
+        <div class="container h-100 py-5">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+              <div class="card shopping-cart" style="border-radius: 15px;">
+                <div class="card-body text-black">
+      
+                  <div class="row">
+                    <div class="col-lg-6 px-5 py-4">
+      
+                      <h3 class="mb-5 pt-2 text-center fw-bold text-uppercase">Your Items</h3>
+      
+                      <div class="d-flex align-items-center mb-5">
+                        <div class="flex-shrink-0">
+                          <img src=""
+                            class="img-fluid" style="width: 150px;" alt="Phone Image">
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                          <a href="#!" class="float-end text-black"><i class="fas fa-times"></i></a>
+                          <h5 class="text-primary">Add Phone Model</h5>
+                          <h6 style="color: #9e9e9e;">Display color and storage</h6>
+                          <div class="d-flex align-items-center">
+                            <p class="fw-bold mb-0 me-5 pe-3">Display price</p>
+                            <div class="def-number-input number-input safari_only">
+                              <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                                class="minus"></button>
+                              <input class="quantity fw-bold text-black" min="0" name="quantity" value="1"
+                                type="number">
+                              <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                class="plus"></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+      
+                      <hr class="mb-4" style="height: 2px; background-color: #1266f1; opacity: 1;">
+      
+                      <div class="d-flex justify-content-between p-2 mb-2" style="background-color: #e1f5fe;">
+                        <h5 class="fw-bold mb-0">Total:</h5>
+                        <h5 class="fw-bold mb-0">#pull total from index</h5>
+                      </div>
+      
+                    </div>
+                    <div class="col-lg-6 px-5 py-4">
+      
+                      <h3 class="mb-5 pt-2 text-center fw-bold text-uppercase">Payment</h3>
+      
+                      <form class="mb-5">
+      
+                        <div class="form-outline mb-5">
+                          <input type="text" id="typeText" class="form-control form-control-lg" siez="17"
+                            value="" minlength="19" maxlength="19" />
+                          <label class="form-label" for="typeText">Card Number</label>
+                        </div>
+      
+                        <div class="form-outline mb-5">
+                          <input type="text" id="typeName" class="form-control form-control-lg" siez="17"
+                            value="" />
+                          <label class="form-label" for="typeName">Name on card</label>
+                        </div>
+      
+                        <div class="row">
+                          <div class="col-md-6 mb-5">
+                            <div class="form-outline">
+                              <input type="text" id="typeExp" class="form-control form-control-lg" value=""
+                                size="7" id="exp" minlength="7" maxlength="7" />
+                              <label class="form-label" for="typeExp">Expiration</label>
+                            </div>
+                          </div>
+                          <div class="col-md-6 mb-5">
+                            <div class="form-outline">
+                              <input type="password" id="typeText" class="form-control form-control-lg"
+                                value="" size="1" minlength="3" maxlength="3" />
+                              <label class="form-label" for="typeText">Cvv</label>
+                            </div>
+                          </div>
+                        </div>
+      
+                        <p class="mb-5">Click buy now to place your order.</p>
+      
+                        <button type="button" class="btn btn-primary btn-block btn-lg" href="order.html">Buy now</button>
+      
+                        <h5 class="fw-bold mb-5" style="position: absolute; bottom: 0;">
+                          <a href="index.html"><i class="fas fa-angle-left me-2"></i>Back to shopping</a>
+                        </h5>
+      
+                      </form>
+      
+                    </div>
+                  </div>
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <footer>
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2023 Copyright:
+            <a class="text-dark" href="https://github.com/hussainkghani/javascript-team-project">Hussain && Kun LLC</a>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+</body>
+</html>
