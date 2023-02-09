@@ -433,7 +433,7 @@ window.onload = function(){
 
         button.onclick = function(){
             orderCount.innerText = num;
-            console.log(count);
+             
         }        
     }
 }
