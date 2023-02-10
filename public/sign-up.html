@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Page</title>
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+  <!-- clear the pattern -->
+  <link rel="stylesheet" href="css/reset.css">
+  <!-- my css -->
+  <link rel="stylesheet" href="css/index.css">
+  <!-- icon font -->
+  <link rel="stylesheet" href="./fa/css/all.css">
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Navbar brand -->
+        <a class="navbar-brand mt-2 mt-lg-0" href="index.html">
+          <img src="images/logo.png" height="100" alt="logo" loading="lazy" />
+        </a>
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="log-in.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="sign-up.html">Sign-up</a>
+          </li>
+        </ul>
+        <!-- Left links -->
+      </div>
+      <!-- Collapsible wrapper -->
+
+      <!-- Right elements -->
+      <div class="d-flex align-items-center">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="order.html">Order</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cart.html">Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="account-details.html">Account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="membership.html">Membership</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gift-card.html">Gift Card</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="inbox.html">Your Inbox</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="customer-service.html">Customer Service</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Right elements -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+  <div class="container">
+    <!-- add 5px padding to y axis -->
+    <div class="container py-5 h-100">
+          <!-- Create a card with border  -->
+          <div class="card card-registration" style="border-radius: 15px;">
+            <!-- Add padding -->
+            <div class="card-body p-0">
+
+              <form action="/sign_up" method="POST">
+              <!-- row to display two columns -->
+              <div class="row g-0">
+                <!-- large column -->
+                <div class="col-lg-6">
+                  <div class="p-5">
+                    <h2 class="mb-5 fw-bold">User Details</h3>
+
+                    <div class="row">
+                      <div class="col-md-6 mb-4 pb-2">
+
+                        <div class="form-outline">
+                          <input type="text" id="input_first_name" name="input_first_name" class="form-control form-control-lg" minlength="3" maxlength="10" required/>
+                          <label class="form-label" for="firstName">First name</label>
+                        </div>
+
+                      </div>
+                      <div class="col-md-6 mb-4 pb-2">
+
+                        <div class="form-outline">
+                          <input type="text" id="input_last_name" name="input_last_name" class="form-control form-control-lg" minlength="3" maxlength="10" required />
+                          <label class="form-label" for="lastName">Last name</label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mb-4 pb-2">
+                      <div class="form-outline">
+                        <input type="email" id="input_email" name="input_email" class="form-control form-control-lg" required/>
+                        <label class="form-label" for="email">Email</label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+
+                        <div class="form-outline">
+                          <input type="password" id="input_password" name="input_password" class="form-control form-control-lg" minlength="5" required/>
+                          <label class="form-label" for="password">password</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- large column -->
+                <div class="col-lg-6">
+                  <div class="p-5">
+                    <h2 class="fw-bold mb-5">Billing Information</h3>
+
+                    <div class="mb-4 pb-2">
+                      <div class="form-outline form-white">
+                        <input type="text" id="input_address" name="input_address" class="form-control form-control-lg" required/>
+                        <label class="form-label" for="streetAddress">Street Address</label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-5 mb-4 pb-2">
+                        <div class="form-outline form-white">
+                          <input type="number" id="input_zip_code" name="input_zip_code" class="form-control form-control-lg" minlength="6" required/>
+                          <label class="form-label" for="zipCode">Zip Code</label>
+                        </div>
+
+                      </div>
+                      <div class="col-md-7 mb-4 pb-2">
+
+                        <div class="form-outline form-white">
+                          <input type="text" id="input_city" name="input_city" class="form-control form-control-lg" required />
+                          <label class="form-label" for="city">City</label>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="mb-4 pb-2">
+                      <div class="form-outline form-white">
+                        <input type="text" id="input_country" name="input_country" class="form-control form-control-lg" required/>
+                        <label class="form-label" for="country">Country</label>
+                      </div>
+                    </div>
+
+                    <div class="col-md-7 mb-4 pb-2">
+
+                      <div class="form-outline form-white">
+                        <input type="number" id="input_phone_number" name="input_phone_number" class="form-control form-control-lg" minlength="10" required/>
+                        <label class="form-label" for="phoneNumber">Phone Number</label>
+                      </div>
+                    </div>
+                    <div class="mb-4">
+                      <div class="form-outline form-white">
+                        <input type="number" id="input_credit_card" name="input_credit_card" class="form-control form-control-lg" minlength="16" required/>
+                        <label class="form-label" for="creditCardNumber">Credit Card Number</label>
+                      </div>
+                    </div>
+
+                    <div class="form-check d-flex justify-content-start mb-4 pb-3">
+                      <input class="form-check-input me-3" type="checkbox" value="" id="accept_conditions_checkbox" required/>
+                      <label class="form-check-label text-black" for="termsConditions">
+                        I accept the Terms and Conditions of your site.
+                      </label>
+                    </div>
+                    <button type="submit" class="btn btn-light btn-lg" data-mdb-ripple-color="dark">Register</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+            </div>
+          </div>
+    </div>
+  </div>
+
+  <footer>
+      <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2023 Copyright:
+    <a class="text-dark" href="https://github.com/hussainkghani/javascript-team-project">Hussain && Kun LLC </a>
+  </div>
+  <!-- Copyright -->
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

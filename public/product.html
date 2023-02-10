@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Project</title>
+    <!-- clear the pattern -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- my css -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- icon font -->
+    <link rel="stylesheet" href="./fa/css/all.css">
+    
+</head>
+<body>
+    <!-- the out wrap -->
+    <div id="container">
+        <!-- header  -->
+        <header id="header">
+            <div class="headerTop">
+                <div class="headerTopMain">
+                    <!-- left top header -->
+                    <div class="left">
+                        <h5>Welcome to Hussain & Kun LLC</h5>
+                        <p>
+                            <a href="./log-in.html">Log In</a>
+                            <a href="./sign-up.html">Sign up</a>
+                        </p>
+                    </div>
+                    <!-- right top header -->
+                    <div class="right">
+                        <nav>
+                            <a href="order.html">Order</a>
+                            <a href="account-details.html">Account</a>
+                            <a href="membership.html">Membership</a>
+                            <a href="gift-card.html">Gift Card</a>
+                            <a href="inbox.html">Your Inbox</a>
+                            <a href="customer-service.html">Customer Service</a>
+                            <a href="cart.html">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <span class='badge badge-warning' id='lblCartCount'></span>
+                                Cart
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="headerBottom">
+                <div class="headerBottomMain">
+                    <!-- Log -->
+                    <h1 class="logo">
+                        <a href="javascript:;">
+                            <img src="images/logo.png" alt="">
+                        </a>
+                    </h1>
+                    <!-- Search -->
+                    <div class="search">
+                        <input type="text" placeholder="Please enter">
+                        <input type="submit" value="Search">
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Category -->
+        <div id="categoryContainer">
+            <div class="categoryNavMain">
+                <a href="javascrit:;"> All Items</a>
+                <a href="javascrit:;"> Clothing</a>
+                <a href="javascrit:;"> Beauty & Personal Care</a>
+                <a href="javascrit:;"> Gift Card</a>
+                <a href="javascrit:;"> Health & Household</a>
+                <a href="javascrit:;"> Pet Supplies</a>
+                <a href="javascrit:;"> Pharmacy</a>
+                <a href="javascrit:;"> Electronics</a>
+            </div>
+        </div>
+
+        <!-- Product Display Page -->
+        <div id="productContainer">
+            <div class="productMain">
+                <!-- nav section -->
+                <div class="navPath"></div>
+                
+                <!-- picture and specific section -->
+                <div class="details">
+                    <!-- left picture section -->
+                    <div class="left">
+                        <!-- top of picutre -->
+                            <div class="leftTop">
+                                <!-- small picture -->
+                                <div class="smallPic">
+                                    <img src="images/b1.png" alt="">
+                                </div>
+                                <!-- big picture -->
+                                
+                            </div>
+                        <!-- bottom of picutre -->
+                        <div class="leftBottom">
+                            <a href="javascript:;" class="prev">  </a>
+                            <div class="picList">
+                                <ul>
+                                </ul>
+                            </div>
+                            <a href="javascript:;" class="next"> > </a>
+                        </div>
+                    </div>
+                    <!-- right good details -->
+                    <div class="right">
+                        <!-- right good detail section  -->
+                        <div class="rightTop"></div>
+                        <div class="rightBottom">
+                            <!-- selection -->
+                            <div class="selection">
+                            </div>
+                            <!-- options -->
+                            <div class="options">    
+                            </div>
+                            <!-- shopping cart -->
+                            <dov class="addCart">
+                                <div class="count">
+                                    <input type="text" id="count" value="0">
+                                    <a href="javascript:;">+</a>
+                                    <a href="javascript:;">-</a>
+                                </div>
+                                <button id="button" type="submit">Add to cart</button>
+                            </dov>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="/js/data.js"></script>
+    <script src="/js/index.js"></script>
+</body>
+</html>

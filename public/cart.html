@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart Order</title>
+  <!-- clear the pattern -->
+  <link rel="stylesheet" href="css/reset.css">
+  <!-- my css -->
+  <link rel="stylesheet" href="css/index.css">
+  <!-- icon font -->
+  <link rel="stylesheet" href="./fa/css/all.css">
+  <link rel="stylesheet" href="./css/cart.css">
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Navbar brand -->
+        <a class="navbar-brand mt-2 mt-lg-0" href="index.html">
+          <img src="images/logo.png" height="100" alt="logo" loading="lazy" />
+        </a>
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="log-in.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sign-up.html">Sign-up</a>
+          </li>
+        </ul>
+        <!-- Left links -->
+      </div>
+      <!-- Collapsible wrapper -->
+
+      <!-- Right elements -->
+      <div class="d-flex align-items-center">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="order.html">Order</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="account-details.html">Account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="membership.html">Membership</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gift-card.html">Gift Card</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="inbox.html">Your Inbox</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="customer-service.html">Customer Service</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cart.html">Cart</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Right elements -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+
+  <!-- Shopping Cart -->
+    <main>
+      <div class="basket">
+        <div class="basket-labels">
+          <ul>
+            <li class="item item-heading">Item</li>
+            <li class="price">Price</li>
+            <li class="quantity">Quantity</li>
+            <li class="subtotal">Subtotal</li>
+          </ul>
+        </div>
+        <div class="basket-product">
+          <div class="item">
+            <div class="product-image">
+              <img src="./images/b1.png" alt="Placholder Image 2" class="product-frame">
+            </div>
+            <div class="product-details">
+              <p>Color: Gold </p>
+              <p>Capacity: 512GB </p>
+              <p>Type: Contract </p>
+              <p>Carrier: AT&T </p>
+            </div>
+          </div>
+          <div class="price"> 1399</div>
+          <div class="quantity">
+            <input type="number" value="4" min="1" class="quantity-field">
+          </div>
+          <div class="subtotal"> 5596.00</div>
+          <div class="remove">
+            <button>Remove</button>
+          </div>
+        </div>
+
+      </div>
+      <aside>
+        <div class="summary">
+          <div class="summary-total-items"><span class="total-items"></span> Items in your Bag</div>
+          <div class="summary-subtotal">
+            <div class="subtotal-title">Subtotal</div>
+            <div class="subtotal-value final-value" id="basket-subtotal">5596.00</div>
+            <div class="summary-promo hide">
+              <div class="promo-title">Promotion</div>
+              <div class="promo-value final-value" id="basket-promo"></div>
+            </div>
+          </div>
+          <div class="summary-delivery">
+            <select name="delivery-collection" class="summary-delivery-selection">
+                <option value="0" selected="selected">Select Collection or Delivery</option>
+               <option value="collection">Pick up at location</option>
+               <option value="first-class">Free Delivery with your membership</option>
+               <option value="second-class">Wednesday, Feb.15 ($5.99)</option>
+               <option value="signed-for">Saturday, Feb,11 ($9.99)</option>
+            </select>
+          </div>
+          <div class="summary-module">
+            <input id="promo-code" type="text" name="promo-code" maxlength="5" class="promo-code-field" placeholder="Promote code">
+            <button class="promo-code-cta">Apply</button>
+          </div>
+          <div class="summary-tax">
+            <div class="total-title">Tax</div>
+            <div class="total-value" id="basket-total">560.4</div>
+          </div>
+          <div class="summary-total">
+            <div class="total-title">Total </div>
+            <div class="total-value" id="basket-total">6166.4</div>
+          </div>
+          <div class="summary-checkout">
+            <button class="checkout-cta">Go to Secure Checkout</button>
+          </div>
+        </div>
+      </aside>
+    </main>
+  
+
+
+  <footer>
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2023 Copyright:
+      <a class="text-dark" href="https://github.com/hussainkghani/javascript-team-project">Hussain && Kun LLC</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"></script>
+      <script src="./js/cart.js"></script>
+      <script src="./js/data.js"></script>
+</body>
+
+</html>
