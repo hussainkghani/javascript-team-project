@@ -26,7 +26,7 @@ db.on("error", ()=> console.log("Connection to database Failed"));
 db.once("open", () => console.log("Connection to Database successful"));
 
 app.use(bodyParser.json());
-app.use(express.static('public'));
+app.use(express.static('docs'));
 //parses any url
 app.use(bodyParser.urlencoded({
     extended:true
