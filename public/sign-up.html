@@ -96,7 +96,7 @@
                       <div class="col-md-6 mb-4 pb-2">
 
                         <div class="form-outline">
-                          <input type="text" id="input_first_name" name="input_first_name" class="form-control form-control-lg" />
+                          <input type="text" id="input_first_name" name="input_first_name" class="form-control form-control-lg" minlength="3" maxlength="10" required/>
                           <label class="form-label" for="firstName">First name</label>
                         </div>
 
@@ -104,7 +104,7 @@
                       <div class="col-md-6 mb-4 pb-2">
 
                         <div class="form-outline">
-                          <input type="text" id="input_last_name" name="input_last_name" class="form-control form-control-lg" />
+                          <input type="text" id="input_last_name" name="input_last_name" class="form-control form-control-lg" minlength="3" maxlength="10" required />
                           <label class="form-label" for="lastName">Last name</label>
                         </div>
                       </div>
@@ -112,7 +112,7 @@
 
                     <div class="mb-4 pb-2">
                       <div class="form-outline">
-                        <input type="email" id="input_email" name="input_email" class="form-control form-control-lg" />
+                        <input type="email" id="input_email" name="input_email" class="form-control form-control-lg" required/>
                         <label class="form-label" for="email">Email</label>
                       </div>
                     </div>
@@ -121,7 +121,7 @@
                       <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
 
                         <div class="form-outline">
-                          <input type="password" id="input_password" name="input_password" class="form-control form-control-lg" />
+                          <input type="password" id="input_password" name="input_password" class="form-control form-control-lg" minlength="5" required/>
                           <label class="form-label" for="password">password</label>
                         </div>
                       </div>
@@ -137,7 +137,7 @@
 
                     <div class="mb-4 pb-2">
                       <div class="form-outline form-white">
-                        <input type="text" id="input_address" name="input_address" class="form-control form-control-lg" />
+                        <input type="text" id="input_address" name="input_address" class="form-control form-control-lg" required/>
                         <label class="form-label" for="streetAddress">Street Address</label>
                       </div>
                     </div>
@@ -145,7 +145,7 @@
                     <div class="row">
                       <div class="col-md-5 mb-4 pb-2">
                         <div class="form-outline form-white">
-                          <input type="text" id="input_zip_code" name="input_zip_code" class="form-control form-control-lg" />
+                          <input type="number" id="input_zip_code" name="input_zip_code" class="form-control form-control-lg" minlength="6" required/>
                           <label class="form-label" for="zipCode">Zip Code</label>
                         </div>
 
@@ -153,7 +153,7 @@
                       <div class="col-md-7 mb-4 pb-2">
 
                         <div class="form-outline form-white">
-                          <input type="text" id="input_city" name="input_city" class="form-control form-control-lg" />
+                          <input type="text" id="input_city" name="input_city" class="form-control form-control-lg" required />
                           <label class="form-label" for="city">City</label>
                         </div>
 
@@ -162,7 +162,7 @@
 
                     <div class="mb-4 pb-2">
                       <div class="form-outline form-white">
-                        <input type="text" id="input_country" name="input_country" class="form-control form-control-lg" />
+                        <input type="text" id="input_country" name="input_country" class="form-control form-control-lg" required/>
                         <label class="form-label" for="country">Country</label>
                       </div>
                     </div>
@@ -170,13 +170,13 @@
                     <div class="col-md-7 mb-4 pb-2">
 
                       <div class="form-outline form-white">
-                        <input type="text" id="input_phone_number" name="input_phone_number" class="form-control form-control-lg" />
+                        <input type="number" id="input_phone_number" name="input_phone_number" class="form-control form-control-lg" minlength="10" required/>
                         <label class="form-label" for="phoneNumber">Phone Number</label>
                       </div>
                     </div>
                     <div class="mb-4">
                       <div class="form-outline form-white">
-                        <input type="text" id="input_credit_card" name="input_credit_card" class="form-control form-control-lg" />
+                        <input type="number" id="input_credit_card" name="input_credit_card" class="form-control form-control-lg" minlength="16" required/>
                         <label class="form-label" for="creditCardNumber">Credit Card Number</label>
                       </div>
                     </div>
@@ -187,7 +187,7 @@
                         I accept the Terms and Conditions of your site.
                       </label>
                     </div>
-                    <button type="button" class="btn btn-light btn-lg" data-mdb-ripple-color="dark">Register</button>
+                    <button type="submit" class="btn btn-light btn-lg" data-mdb-ripple-color="dark">Register</button>
                   </div>
                 </div>
               </div>
