@@ -1,5 +1,3 @@
-// import{index} from "./js/index"
-
 // Need to install express, mongoose, nodemon, and body-parser. Check dependencies in package.json
 const express = require("express");
 
@@ -99,7 +97,7 @@ app.post("/sign_up", (req,res)=>{
     //insert the customerData document into customers schema
     db.collection('customers').insertOne(customerData,(err, collection)=>{
         if(err){
-            throw err;
+            throw err();
         }
         console.log("Customer data upload successful");
     });
