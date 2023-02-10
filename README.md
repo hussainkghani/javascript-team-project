@@ -1,1 +1,2 @@
-# javascript-team-project
+# javascript-team-project 
+# Navigate to /index if page doesn't load
