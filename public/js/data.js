@@ -122,5 +122,10 @@ var goodData = {
                 ]
             }
         ]
-    }
+    }, 
+    
+}
+
+var shoppingCart = {
+    phone: [{basicPrice: 1399},{color:''},{capacity: ''},{type: '',},{carrier:''}]
 }

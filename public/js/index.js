@@ -2,7 +2,8 @@
 window.onload = function(){
     //create a variable for picture zoom out effect.
     var bigImgIndex = 0;
-   
+    var cartArray = new Array(4);
+
     //navPathRendering. 
     navPathDataBind();
     function navPathDataBind(){
@@ -308,7 +309,7 @@ window.onload = function(){
       var dlNodes = document.querySelectorAll("dl");
       //create empty array to stroe selected result
       var arr = new Array(dlNodes.length).fill(0);
-        
+        cartArray = arr;
       //create mark element's parent element
       var select = document.querySelector(".selection");
 
@@ -400,6 +401,8 @@ window.onload = function(){
     //add To Cart
     addToCart()
     function addToCart(){
+        var cart = shoppingCart;
+
         //1. get the count value 
         var orderCount = document.querySelector("#lblCartCount");
         
@@ -433,7 +436,10 @@ window.onload = function(){
 
         button.onclick = function(){
             orderCount.innerText = num;
-             
+            cart.phone[1].color = cartArray[0].innerText;
+            cart.phone[2].capacity = cartArray[1].innerText;
+            cart.phone[3].type = cartArray[2].innerText;
+            cart.phone[4].carrier = cartArray[3].innerText;
         }        
     }
 }
